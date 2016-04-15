@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Задание</h1>
+            <p>
+                Привет! Это задание по ember, ниже список пунктов, каждый их которых нужно попробовать выполнить. Порядк выполнения не важен.
+
+                Суть задания – создать простое TODO приложение (список дел). Как видно из списка первые два пункта  уже выполнены в качестве примера.
+            </p>
+            {{outlet}}
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="btn-group btn-group-justified">
+                {{link-to 'all tasks' 'todos' class="btn btn-default"}}
+                {{link-to 'finished' 'done' class="btn btn-success"}}
+                {{link-to 'unfinished' 'undone' class="btn btn-danger"}}
+            </div>
+        </div>
+    </div>
+</div>

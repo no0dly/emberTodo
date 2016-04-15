@@ -1,0 +1,32 @@
+<h3 class="text-center">Список дел:</h3>
+<br>
+{{#each model as |item|}}
+    <div class="checkbox">
+        <label>
+            {{#if item.is_done }}
+                <input type="checkbox" checked>
+            {{else}}
+                <input type="checkbox">
+            {{/if}}
+            {{item.text}}
+        </label>
+    </div>
+    <br>
+{{/each}}
+<form class="form-horizontal" id="todoForm">
+    <div class="row">
+        <div class="form-group form-group-sm col-xs-12">
+            <div class="row">
+                <label class="col-xs-2 control-label" for="formGroupInputSmall">Add new task</label>
+                <div class="col-xs-10">
+                    <input class="form-control" type="text" id="formGroupInputSmall" placeholder="new task name">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-12 text-right">
+            {{input type="submit" action="submit" class="btn btn-success" value="Submit"}}
+        </div>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+<h2 class="text-center">Список невыполненный дел:</h2>
+<br>
+<div class="list-group">
+    {{#each model as |item|}}
+        {{#if item.is_done }}
+
+        {{else}}
+            <button type="button" class="list-group-item">{{item.text}}</button>
+        {{/if}}
+    {{/each}}
+</div>
